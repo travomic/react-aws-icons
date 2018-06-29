@@ -40,8 +40,10 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
 
     <strong>%ICON_COUNT%</strong> total icons
     &nbsp;–&nbsp;
-    Sourced from: <a href="%HOMEPAGE%">%HOMEPAGE%</a>
+    Sourced from: <a href="%SOURCE_URL%">%SOURCE_URL%</a>
     <br><br>
+    <a href="%HOMEPAGE%">%HOMEPAGE%</a>
+    <br>
     Version <var>%VERSION%</var>
     <br>
     License: <em>%LICENSE%</em>

@@ -2,7 +2,7 @@
   "name": "react-aws-icons",
   "version": "1.0.0",
   "description": "A collection of AWS Simple Icons to be used with React",
-  "homepage": "https://aws.amazon.com/architecture/icons",
+  "homepage": "https://github.com/travomic/react-aws-icons",
   "main": "dist/aws/logo/AWS.js",
   "author": "Travis Barney",
   "license": "MIT",

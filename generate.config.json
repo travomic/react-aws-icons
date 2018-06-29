@@ -11,6 +11,7 @@
   "icons": {
     "aws": {
       "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico",
+      "sourceURL": "https://aws.amazon.com/architecture/icons",
       "src": "https://s3-us-west-2.amazonaws.com/awswebanddesign/Architecture+Icons/AWS-Arch-Icon-Sets_Feb-18/PNG%2C+SVG%2C+EPS_18.02.22.zip",
       "zipPathPrefix": "PNG, SVG, EPS/",
       "map": {

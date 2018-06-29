@@ -182,7 +182,7 @@ const iconTreeToDisk = async (pkg, conf, key, tree) => {
   const pre = await fs.readFile(conf.previewTemplate, UTF8);
   const jsxPath = `${conf.jsxPath}/${key}`;
   const previewDest = `${conf.previewPath}/${key}.html`;
-  const favicon = conf.icons[key].favicon;
+  const { favicon, sourceURL } = conf.icons[key];
 
   const output = tree.reduce((acc, leaf) => {
     if (leaf.sub) {
@@ -232,6 +232,7 @@ const iconTreeToDisk = async (pkg, conf, key, tree) => {
     .replace('%FAVICON%', favicon)
     .replace(/%HOMEPAGE%/g, pkg.homepage)
     .replace(/%PACKAGE_NAME%/g, pkg.name)
+    .replace(/%SOURCE_URL%/g, sourceURL)
     .replace(/\{size\}/g, 64);
 
   // Write the preview HTML page, with inlined SVG samples.
