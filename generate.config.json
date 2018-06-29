@@ -2,7 +2,7 @@
   "jsxPath": "./jsx",
   "svgPath": "./svg",
   "zipPath": "./zip",
-  "previewPath": "./preview",
+  "previewPath": "./docs",
   "packagePath": "./package.json",
   "iconTemplate": "./src/icon.tpl",
   "readmeTemplate": "./src/README.tpl",
