@@ -1,0 +1,7 @@
+# dependencies
+node_modules
+
+# downloaded/generated assets
+/jsx/
+/svg/
+/zip/
