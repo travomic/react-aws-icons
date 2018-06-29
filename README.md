@@ -37,7 +37,7 @@ Without a custom size they are **24**×**24** by default.
 
 Here is a complete list of the icon filenames _(excluding the **.js** extension)_ that are provided in this collection.
 
-You can [preview them as HTML here](https://travomic.github.io/aws.html).
+You can [preview them as HTML here](https://travomic.github.io/react-aws-icons/aws.html).
 
 
 ### aws/compute
