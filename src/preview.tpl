@@ -15,9 +15,9 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
 .icons > UL::after { content: ""; clear: both; display: table; }
 .icons LI { float: left; position: relative; z-index: 1; }
 .icons LABEL { display: none; }
-.icons LI:hover { background: #222; z-index: 2; border-radius: 4px; }
-.icons LI:hover SVG { transform: scale(1.25); }
-.icons LI:hover LABEL {
+.icons LI:hover, .icons LI:focus { background: #222; z-index: 2; border-radius: 4px; outline: none; }
+.icons LI:hover SVG, .icons LI:focus SVG { transform: scale(1.25); }
+.icons LI:hover LABEL, .icons LI:focus LABEL {
   display: block;
   position: absolute;
   padding: 0.5em;

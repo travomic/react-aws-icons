@@ -202,7 +202,7 @@ const iconTreeToDisk = async (pkg, conf, key, tree) => {
     if (sub.list.length === 0) { return acc; }
 
     const items = sub.list.map(([name, html]) => `
-      <li><label>${name}</label><div>${html}</div></li>
+      <li tabindex="0"><label>${name}</label><div>${html}</div></li>
     `).join('\n\n');
 
     return `${acc}

@@ -15,9 +15,9 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
 .icons > UL::after { content: ""; clear: both; display: table; }
 .icons LI { float: left; position: relative; z-index: 1; }
 .icons LABEL { display: none; }
-.icons LI:hover { background: #222; z-index: 2; border-radius: 4px; }
-.icons LI:hover SVG { transform: scale(1.25); }
-.icons LI:hover LABEL {
+.icons LI:hover, .icons LI:focus { background: #222; z-index: 2; border-radius: 4px; outline: none; }
+.icons LI:hover SVG, .icons LI:focus SVG { transform: scale(1.25); }
+.icons LI:hover LABEL, .icons LI:focus LABEL {
   display: block;
   position: absolute;
   padding: 0.5em;
@@ -46,7 +46,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
       </h2>
       
       <ul>
-      <li><label>AMI</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>AMI</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -65,7 +65,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>AccessControlList</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>AccessControlList</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -84,7 +84,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>AppLoadBalancer</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>AppLoadBalancer</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -110,7 +110,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>AutoScaling</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>AutoScaling</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -125,7 +125,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>BeanstalkApplication</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>BeanstalkApplication</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -136,7 +136,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>BeanstalkDeployment</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>BeanstalkDeployment</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -150,7 +150,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>C3</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>C3</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -163,7 +163,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CloudWatch</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>CloudWatch</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -178,7 +178,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Cluster</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Cluster</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Cluster</title>
   <g>
     <path d="M72.71,47.1a2,2,0,0,0,2-2V37.81a2,2,0,0,0-2-2H65.42a2,2,0,0,0-1.24.44l-4.5-3.36v-6.3a2,2,0,0,0-2-2H50.4a2,2,0,0,0-2,2v7.29a2,2,0,0,0,.21.87l-6.79,8.06H28.28a3,3,0,0,0-3,3V59.54a3,3,0,0,0,3,3H42a3,3,0,0,0,.76-.11l5.67,5.91a2,2,0,0,0,0,.39V76a2,2,0,0,0,2,2h7.29a2,2,0,0,0,2-2V69.66l4.48-3.38a2,2,0,0,0,1.26.46h7.29a2,2,0,0,0,2-2V57.44a2,2,0,0,0-2-2h-2.4V47.1Zm-8.42,1.32-1.71-3.51.84-.28v.46A2,2,0,0,0,65,47ZM58.88,67.13a2,2,0,0,0-.73-.34l3.09-6.36,2.19.54V63.7Zm-8-31.25H55.4l3.68,7.56L45,48.1V45.82a3,3,0,0,0-.77-2Zm12.5,2.92V42l-1.94.64-3.32-6.83a2,2,0,0,0,.77-.38ZM45,59.54V56.41l13.75,3.41-3.36,6.91h-5l-5.66-5.9A3,3,0,0,0,45,59.54Zm20-4a2,2,0,0,0-1.53,1.94v1l-1.07-.26,1.94-4Zm-5.08,2L45,53.83v-3.1l15.18-5,2.71,5.57Zm7.95-2.08h-.11l-2-4.16,2-4.18h.1Z" fill="#9d5025"/>
@@ -189,7 +189,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Container</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Container</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Container</title>
   <g>
     <rect x="23.5" y="37.61" width="53" height="27.25" fill="#9d5025"/>
@@ -222,7 +222,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ContainerCPU</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ContainerCPU</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -265,7 +265,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ContainerMachine</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ContainerMachine</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -290,7 +290,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CustomerGateway</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>CustomerGateway</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -307,7 +307,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DB</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DB</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -323,7 +323,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Download</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Download</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -335,7 +335,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ECR</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ECR</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -364,7 +364,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>EdgeLocation</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>EdgeLocation</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 <clipPath id="clip-path">
@@ -395,7 +395,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ElasticIPAddress</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ElasticIPAddress</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -406,7 +406,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ElasticNetworkAdapter</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ElasticNetworkAdapter</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -422,7 +422,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ElasticNetworkInterface</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ElasticNetworkInterface</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -439,7 +439,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Endpoints</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Endpoints</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -452,7 +452,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Engine</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Engine</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Engine</title>
   <g>
     <path d="M83.13,41H80.42c-2,0-3.66,1.11-3.85,3H72.11c-.49-3.78-2-7-3.7-7H61V35.76c0-2.14-.91-3.78-3.05-3.78H53V30h6c.69,0,2-1,2-1.68V25.63H36V28.3A1.92,1.92,0,0,0,37.52,30H44v2H38.58C36.44,32,34,33.62,34,35.76V37H25.8a4.1,4.1,0,0,0-3.8,4.2V53H17V39.83c0-.75-1-1.35-2-1.35s-2,.61-2,1.35v31c0,.75,1,1.36,2,1.36s2-.61,2-1.36V58h5V69.07A3.84,3.84,0,0,0,25.8,73H43c.67,3,1.92,5,3.37,5H68.41c1.9,0,3.48-4,3.81-8H77v.64A3.1,3.1,0,0,0,80.42,74h2.71C85.27,74,87,72.76,87,70.62v-26A3.72,3.72,0,0,0,83.13,41Z" fill="#9d5025"/>
@@ -463,7 +463,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>EngineMapRM3</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>EngineMapRM3</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Engine Map RM3</title>
   <g>
     <path d="M83.13,41H80.42c-2,0-3.66,1.11-3.85,3H72.11c-.49-3.78-2-7-3.7-7H61V35.76c0-2.14-.91-3.78-3.05-3.78H53V30h6c.69,0,2-1,2-1.68V25.63H36V28.3A1.92,1.92,0,0,0,37.52,30H44v2H38.58C36.44,32,34,33.62,34,35.76V37H25.8a4.1,4.1,0,0,0-3.8,4.2V53H17V39.83c0-.75-1-1.35-2-1.35s-2,.61-2,1.35v31c0,.75,1,1.36,2,1.36s2-.61,2-1.36V58h5V69.07A3.84,3.84,0,0,0,25.8,73H43c.67,3,1.92,5,3.37,5H68.41c1.9,0,3.48-4,3.81-8H77v.64A3.1,3.1,0,0,0,80.42,74h2.71C85.27,74,87,72.76,87,70.62v-26A3.72,3.72,0,0,0,83.13,41Z" fill="#9d5025"/>
@@ -484,7 +484,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>EngineMapRM5</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>EngineMapRM5</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Engine Map RM5</title>
   <g>
     <path d="M83.13,41H80.42c-2,0-3.66,1.11-3.85,3H72.11c-.49-3.78-2-7-3.7-7H61V35.76c0-2.14-.91-3.78-3.05-3.78H53V30h6c.69,0,2-1,2-1.68V25.63H36V28.3A1.92,1.92,0,0,0,37.52,30H44v2H38.58C36.44,32,34,33.62,34,35.76V37H25.8a4.1,4.1,0,0,0-3.8,4.2V53H17V39.83c0-.75-1-1.35-2-1.35s-2,.61-2,1.35v31c0,.75,1,1.36,2,1.36s2-.61,2-1.36V58h5V69.07A3.84,3.84,0,0,0,25.8,73H43c.67,3,1.92,5,3.37,5H68.41c1.9,0,3.48-4,3.81-8H77v.64A3.1,3.1,0,0,0,80.42,74h2.71C85.27,74,87,72.76,87,70.62v-26A3.72,3.72,0,0,0,83.13,41Z" fill="#9d5025"/>
@@ -503,7 +503,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>EngineMapRM7</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>EngineMapRM7</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Engine Map RM7</title>
   <g>
     <path d="M83.13,41H80.42c-2,0-3.66,1.11-3.85,3H72.11c-.49-3.78-2-7-3.7-7H61V35.76c0-2.14-.91-3.78-3.05-3.78H53V30h6c.69,0,2-1,2-1.68V25.63H36V28.3A1.92,1.92,0,0,0,37.52,30H44v2H38.58C36.44,32,34,33.62,34,35.76V37H25.8a4.1,4.1,0,0,0-3.8,4.2V53H17V39.83c0-.75-1-1.35-2-1.35s-2,.61-2,1.35v31c0,.75,1,1.36,2,1.36s2-.61,2-1.36V58h5V69.07A3.84,3.84,0,0,0,25.8,73H43c.67,3,1.92,5,3.37,5H68.41c1.9,0,3.48-4,3.81-8H77v.64A3.1,3.1,0,0,0,80.42,74h2.71C85.27,74,87,72.76,87,70.62v-26A3.72,3.72,0,0,0,83.13,41Z" fill="#9d5025"/>
@@ -522,7 +522,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Flowlogs</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Flowlogs</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -541,7 +541,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Forums</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Forums</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Forums</title>
   <polygon points="11.76 29.37 88.24 29.37 88.24 26.86 50 16.88 11.76 26.86 11.76 29.37" fill="#9d5125"/>
   <rect x="11.76" y="13.23" width="76.48" height="13.63" fill="#f58535"/>
@@ -560,7 +560,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>HDFSCluster</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>HDFSCluster</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>HDFSCluster</title>
   <g>
     <g>
@@ -577,7 +577,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>HostedZone</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>HostedZone</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -588,7 +588,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Instance</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Instance</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -599,7 +599,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Instances</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Instances</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -614,7 +614,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>InternetGateway</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>InternetGateway</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -628,7 +628,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Kinesis</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Kinesis</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Kinesis</title>
   <g>
     <path d="M80.92,66c0,9.58-5.45,14.18-12.18,14.18S56.57,76,56.57,66.79c0-6.73,5.45-9.93,12.18-9.93S80.92,59.31,80.92,66Z" fill="#9d5025"/>
@@ -644,7 +644,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>KinesisAnalytics</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>KinesisAnalytics</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Kinesis Analytics</title>
   <g>
     <path d="M67.38,23.8H32.62a9.12,9.12,0,0,0-9.12,9.12v16.5A14.38,14.38,0,0,1,38.23,65.06a12.9,12.9,0,0,1-1.32,2.67v2.2A9.53,9.53,0,0,1,49.34,76.8h18a9.12,9.12,0,0,0,9.12-9.12V32.92A9.12,9.12,0,0,0,67.38,23.8Z" fill="#9d5025"/>
@@ -665,7 +665,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>KinesisFirehose</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>KinesisFirehose</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Kinesis Firehose</title>
   <g>
     <path d="M32.62,23.8H67.38a9.12,9.12,0,0,1,9.12,9.12V48.22c-1.8-.93-5.74-1.92-11.57-1.92a42.35,42.35,0,0,0-6.67.5c-3.93.65-6,1.77-6,2.46v26c0,.43.59,1,1.71,1.56H32.62a9.12,9.12,0,0,1-9.12-9.12V32.92A9.12,9.12,0,0,1,32.62,23.8Z" fill="#9d5025"/>
@@ -684,7 +684,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>KinesisStreams</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>KinesisStreams</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Kinesis Streams</title>
   <g>
     <rect x="23.5" y="24.1" width="53" height="53" rx="9.12" ry="9.12" fill="#9d5025"/>
@@ -699,7 +699,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>LambdaFunction</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>LambdaFunction</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -712,7 +712,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>LoadBalancer</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>LoadBalancer</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -728,7 +728,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ManagementConsole</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ManagementConsole</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Management Console</title>
   <path d="M71.68,70.3H54.07A1.7,1.7,0,0,0,52.36,72h21A1.69,1.69,0,0,0,71.68,70.3Z" fill="none"/>
   <path d="M54.07,73.68H71.68A1.69,1.69,0,0,0,73.37,72h-21A1.7,1.7,0,0,0,54.07,73.68Z" fill="none"/>
@@ -741,7 +741,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>NATGateway</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>NATGateway</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -760,7 +760,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Peering</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Peering</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -774,7 +774,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Registry</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Registry</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -839,7 +839,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Rescue</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Rescue</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -856,7 +856,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>RouteTable</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>RouteTable</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -881,7 +881,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Router</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Router</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -899,7 +899,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>SearchDocuments</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>SearchDocuments</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Search Documents</title>
   <g>
     <g style="isolation: isolate;">
@@ -922,7 +922,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Spot</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Spot</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -934,7 +934,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>SpotFleet</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>SpotFleet</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 <clipPath id="clip-path">
@@ -968,7 +968,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Stream</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Stream</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -980,7 +980,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>VPC</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>VPC</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>VPC</title>
   <path d="M85.23,58v3.19C85.23,67,78.85,73,71,73H29C21.15,73,14.77,67,14.77,61.19V58Z" fill="#9d5125"/>
   <path d="M41.89,26.9A18,18,0,0,1,58.31,37.46,9.14,9.14,0,0,1,72.6,44.64c7.1.59,12.63,7.44,12.63,12.88v1.18c0,5.85-6.38,11.78-14.26,11.78H29c-7.86,0-14.24-5.93-14.24-11.78V57.53c0-4.51,3.79-10.71,9.12-12.25,0-.16,0-.34,0-.51A17.94,17.94,0,0,1,41.89,26.9Z" fill="#f58535"/>
@@ -992,7 +992,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>VPN</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>VPN</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1004,7 +1004,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>VPNConnection</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>VPNConnection</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1015,7 +1015,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>X1</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>X1</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1038,7 +1038,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
       </h2>
       
       <ul>
-      <li><label>Attribute</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Attribute</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1056,7 +1056,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Attributes</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Attributes</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1080,7 +1080,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Cache</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Cache</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1096,7 +1096,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DBM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DBM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1110,7 +1110,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DBR</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DBR</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1124,7 +1124,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DBS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DBS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1138,7 +1138,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DenseComputeNode</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DenseComputeNode</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Dense Compute Node</title>
   <g>
     <path d="M72.71,47.1a2,2,0,0,0,2-2V37.81a2,2,0,0,0-2-2H65.42a2,2,0,0,0-1.24.44l-4.5-3.36v-6.3a2,2,0,0,0-2-2H50.4a2,2,0,0,0-2,2v7.29a2,2,0,0,0,.21.87l-6.79,8.06H28.28a3,3,0,0,0-3,3V59.54a3,3,0,0,0,3,3H42a3,3,0,0,0,.76-.11l5.67,5.91a2,2,0,0,0,0,.39V76a2,2,0,0,0,2,2h7.29a2,2,0,0,0,2-2V69.66l4.48-3.38a2,2,0,0,0,1.26.46h7.29a2,2,0,0,0,2-2V57.44a2,2,0,0,0-2-2h-2.4V47.1Zm-8.42,1.32-1.71-3.51.84-.28v.46A2,2,0,0,0,65,47ZM58.88,67.13a2,2,0,0,0-.73-.34l3.09-6.36,2.19.54V63.7Zm-8-31.25H55.4l3.68,7.56L45,48.1V45.82a3,3,0,0,0-.77-2Zm12.5,2.92V42l-1.94.64-3.32-6.83a2,2,0,0,0,.77-.38ZM45,59.54V56.41l13.75,3.41-3.36,6.91h-5l-5.66-5.9A3,3,0,0,0,45,59.54Zm20-4a2,2,0,0,0-1.53,1.94v1l-1.07-.26,1.94-4Zm-5.08,2L45,53.83v-3.1l15.18-5,2.71,5.57Zm7.95-2.08h-.11l-2-4.16,2-4.18h.1Z" fill="#19486f"/>
@@ -1157,7 +1157,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DenseStorageNode</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DenseStorageNode</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Dense Storage Node</title>
   <g>
     <path d="M72.71,47.1a2,2,0,0,0,2-2V37.81a2,2,0,0,0-2-2H65.42a2,2,0,0,0-1.24.44l-4.5-3.36v-6.3a2,2,0,0,0-2-2H50.4a2,2,0,0,0-2,2v7.29a2,2,0,0,0,.21.87l-6.79,8.06H28.28a3,3,0,0,0-3,3V59.54a3,3,0,0,0,3,3H42a3,3,0,0,0,.76-.11l5.67,5.91a2,2,0,0,0,0,.39V76a2,2,0,0,0,2,2h7.29a2,2,0,0,0,2-2V69.66l4.48-3.38a2,2,0,0,0,1.26.46h7.29a2,2,0,0,0,2-2V57.44a2,2,0,0,0-2-2h-2.4V47.1Zm-8.42,1.32-1.71-3.51.84-.28v.46A2,2,0,0,0,65,47ZM58.88,67.13a2,2,0,0,0-.73-.34l3.09-6.36,2.19.54V63.7Zm-8-31.25H55.4l3.68,7.56L45,48.1V45.82a3,3,0,0,0-.77-2Zm12.5,2.92V42l-1.94.64-3.32-6.83a2,2,0,0,0,.77-.38ZM45,59.54V56.41l13.75,3.41-3.36,6.91h-5l-5.66-5.9A3,3,0,0,0,45,59.54Zm20-4a2,2,0,0,0-1.53,1.94v1l-1.07-.26,1.94-4Zm-5.08,2L45,53.83v-3.1l15.18-5,2.71,5.57Zm7.95-2.08h-.11l-2-4.16,2-4.18h.1Z" fill="#19486f"/>
@@ -1176,7 +1176,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>GlobalSecondaryIndex</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>GlobalSecondaryIndex</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1209,7 +1209,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Item</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Item</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1227,7 +1227,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Items</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Items</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1251,7 +1251,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>MSSQL</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>MSSQL</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1274,7 +1274,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>MSSQLM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>MSSQLM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1290,7 +1290,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Memcached</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Memcached</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1303,7 +1303,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Migration</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Migration</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1326,7 +1326,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>MySQL</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>MySQL</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1348,7 +1348,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>MySQLM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>MySQLM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1364,7 +1364,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Oracle</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Oracle</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1390,7 +1390,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>OracleM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>OracleM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1407,7 +1407,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>PIOP</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>PIOP</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1426,7 +1426,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>PostgreSQL</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>PostgreSQL</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1447,7 +1447,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Redis</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Redis</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1460,7 +1460,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>SQLM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>SQLM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1477,7 +1477,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Table</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Table</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1511,7 +1511,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
       </h2>
       
       <ul>
-      <li><label>Assignment</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Assignment</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1523,7 +1523,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Client</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Client</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Client</title>
   <path d="M71.68,70.3H54.07A1.7,1.7,0,0,0,52.36,72h21A1.69,1.69,0,0,0,71.68,70.3Z" fill="none"/>
   <path d="M54.07,73.68H71.68A1.69,1.69,0,0,0,73.37,72h-21A1.7,1.7,0,0,0,54.07,73.68Z" fill="none"/>
@@ -1536,7 +1536,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DB</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DB</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <defs>
     <clipPath id="clip-path">
       <path d="M71.92,26.66v2.79c0,1.28-3.62,3.38-10.42,4.58A66.67,66.67,0,0,1,50,35c-14.2,0-22-3.65-22-5.52V26.66c0,1.87,7.75,5.52,22,5.52a66.7,66.7,0,0,0,11.55-.93C68.3,30,71.92,27.94,71.92,26.66Z" fill="#4f4f4f"/>
@@ -1560,7 +1560,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DataCenter</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DataCenter</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Data Center</title>
   <path d="M55.77,24.34a3,3,0,0,1,3,3l11.75,45v2.78a3,3,0,0,1-3,3h-35a3,3,0,0,1-3-3V72.61L42.71,27.35a3,3,0,0,1,3-3Z" fill="#4f4f4f"/>
   <path d="M67.52,21.86a3,3,0,0,1,3,3V72.61a3,3,0,0,1-3,3h-35a3,3,0,0,1-3-3V24.87a3,3,0,0,1,3-3Z" fill="#7d7c7c"/>
@@ -1570,7 +1570,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Disk</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Disk</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <defs>
     <clipPath id="clip-path">
       <path d="M77.5,48.78v2.46a27.51,27.51,0,0,1-55,0V48.78Z" fill="#4f4f4f"/>
@@ -1594,7 +1594,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Internet</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Internet</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Internet</title>
   <path d="M85.23,49v3.19C85.23,58,78.85,64,71,64H29C21.15,64,14.77,58,14.77,52.19V49Z" fill="#7d7c7c"/>
   <path d="M41.89,17.9A18,18,0,0,1,58.31,28.46,9.14,9.14,0,0,1,72.6,35.64c7.1.59,12.63,7.44,12.63,12.88v1.18c0,5.85-6.38,11.78-14.26,11.78H29c-7.86,0-14.24-5.93-14.24-11.78V48.53c0-4.51,3.79-10.71,9.12-12.25,0-.16,0-.34,0-.51A17.94,17.94,0,0,1,41.89,17.9Z" fill="#d2d3d3"/>
@@ -1608,7 +1608,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>InternetCloud</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>InternetCloud</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Internet Cloud</title>
   <path d="M85.23,58v3.19C85.23,67,78.85,73,71,73H29C21.15,73,14.77,67,14.77,61.19V58Z" fill="#7d7c7c"/>
   <path d="M41.89,26.9A18,18,0,0,1,58.31,37.46,9.14,9.14,0,0,1,72.6,44.64c7.1.59,12.63,7.44,12.63,12.88v1.18c0,5.85-6.38,11.78-14.26,11.78H29c-7.86,0-14.24-5.93-14.24-11.78V57.53c0-4.51,3.79-10.71,9.12-12.25,0-.16,0-.34,0-.51A17.94,17.94,0,0,1,41.89,26.9Z" fill="#d2d3d3"/>
@@ -1621,7 +1621,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>InternetWifi</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>InternetWifi</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Internet Wifi</title>
   <path d="M85.23,58v3.19C85.23,67,78.85,73,71,73H29C21.15,73,14.77,67,14.77,61.19V58Z" fill="#7d7c7c"/>
   <path d="M41.89,26.9A18,18,0,0,1,58.31,37.46,9.14,9.14,0,0,1,72.6,44.64c7.1.59,12.63,7.44,12.63,12.88v1.18c0,5.85-6.38,11.78-14.26,11.78H29c-7.86,0-14.24-5.93-14.24-11.78V57.53c0-4.51,3.79-10.71,9.12-12.25,0-.16,0-.34,0-.51A17.94,17.94,0,0,1,41.89,26.9Z" fill="#d2d3d3"/>
@@ -1633,7 +1633,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>MobileClient</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>MobileClient</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Mobile Client</title>
   <path d="M58,24.34a3.12,3.12,0,0,1,3.13,3.11L68.27,75a3.12,3.12,0,0,1-3.13,3.11H34.86A3.13,3.13,0,0,1,31.73,75l8.89-47.54a3.13,3.13,0,0,1,3.13-3.11Z" fill="#7d7c7c"/>
   <path d="M65.14,21.86A3.12,3.12,0,0,1,68.27,25V72.5a3.12,3.12,0,0,1-3.13,3.11H34.86a3.13,3.13,0,0,1-3.13-3.11V25a3.13,3.13,0,0,1,3.13-3.11Z" fill="#d2d3d3"/>
@@ -1643,7 +1643,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>MultiMedia</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>MultiMedia</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Multi Media</title>
   <path d="M75.24,24.35a3.94,3.94,0,0,1,3.95,3.92V74.18a3.92,3.92,0,0,1-3.95,3.9H24.75a3.92,3.92,0,0,1-3.94-3.9V28.27a3.93,3.93,0,0,1,3.94-3.92Z" fill="#7d7c7c"/>
   <path d="M75.24,21.87a3.94,3.94,0,0,1,3.95,3.92V71.7a3.92,3.92,0,0,1-3.95,3.9H24.75a3.92,3.92,0,0,1-3.94-3.9V25.79a3.93,3.93,0,0,1,3.94-3.92Z" fill="#d2d3d3"/>
@@ -1653,7 +1653,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>OfficeBuilding</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>OfficeBuilding</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Office Building</title>
   <g>
     <rect x="35.17" y="40.85" width="29.66" height="46.1" fill="#4f4f4f"/>
@@ -1708,7 +1708,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Requester</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Requester</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1725,7 +1725,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>SAMLToken</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>SAMLToken</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>SAMLToken</title>
   <path d="M17.57,57.11l27.8,27.8L78.43,51.85V24H50.63L17.57,54.63ZM61.52,41a5.51,5.51,0,1,1,7.79,0A5.51,5.51,0,0,1,61.52,41Z" fill="#7d7c7c"/>
   <path d="M17.57,54.63l27.8,27.8L78.43,49.37V21.57H50.63Z" fill="#d2d3d3"/>
@@ -1736,7 +1736,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>SSLPadlock</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>SSLPadlock</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>SSLPadlock</title>
   <path d="M50,84.55l-.71-.24c-.28-.1-7-2.47-13.65-10.12a49.81,49.81,0,0,1-9.15-15.82,75.32,75.32,0,0,1-4.11-25.71V30.52l2.12,0c1.91,0,5.47-.63,6.89-2.05,2-2,2.36-5.77,2.36-5.81l.1-1.37,1.28-.49A47.19,47.19,0,0,1,50,17.93a49.81,49.81,0,0,1,14.82,2.82l1.31.48.1,1.39s.32,3.72,2.4,5.8c1.32,1.32,5.22,1.89,6.9,2l2.08.08v2.08a75.67,75.67,0,0,1-4.11,25.78,49.91,49.91,0,0,1-9.15,15.86C57.69,81.83,51,84.21,50.71,84.3Z" fill="#7d7c7c"/>
   <path d="M50,82.07l-.71-.24c-.28-.1-7-2.47-13.65-10.12a49.81,49.81,0,0,1-9.15-15.82,75.32,75.32,0,0,1-4.11-25.71V28l2.12,0c1.91,0,5.47-.63,6.89-2.05,2-2,2.36-5.77,2.36-5.81l.1-1.37,1.28-.49A47.19,47.19,0,0,1,50,15.45a49.81,49.81,0,0,1,14.82,2.82l1.31.48.1,1.39s.32,3.72,2.4,5.8c1.32,1.32,5.22,1.89,6.9,2l2.08.08v2.08a75.67,75.67,0,0,1-4.11,25.78,49.91,49.91,0,0,1-9.15,15.86c-6.66,7.66-13.37,10-13.65,10.14Z" fill="#d2d3d3"/>
@@ -1747,7 +1747,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Server</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Server</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Server</title>
   <path d="M55.77,24.34a3,3,0,0,1,3,3l11.75,45v2.78a3,3,0,0,1-3,3h-35a3,3,0,0,1-3-3V72.61L42.71,27.35a3,3,0,0,1,3-3Z" fill="#4f4f4f"/>
   <path d="M67.52,21.86a3,3,0,0,1,3,3V72.61a3,3,0,0,1-3,3h-35a3,3,0,0,1-3-3V24.87a3,3,0,0,1,3-3Z" fill="#7d7c7c"/>
@@ -1757,7 +1757,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>TapeStorage</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>TapeStorage</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Tape Storage</title>
   <rect x="16.83" y="46.63" width="31.01" height="3.06" fill="#4f4f4f"/>
   <rect x="52.16" y="47.16" width="31.01" height="3.6" fill="#4f4f4f"/>
@@ -1776,7 +1776,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Task</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Task</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1787,7 +1787,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>User</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>User</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>User</title>
   <path d="M50,24.51l11.78,9.2v2.48a11.77,11.77,0,0,1-23.54,0V33.71Z" fill="#7d7c7c"/>
   <path d="M56.73,51.22c7.44,0,13.45,4.51,13.45,11.87V77.93H62.43V67.52H61.11V77.93H39.19V67.52H37.86V77.93h-8V63.09c0-7.36,6-11.87,13.46-11.87Z" fill="#7d7c7c"/>
@@ -1798,7 +1798,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Users</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Users</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Users</title>
   <path d="M70.19,45c5.44,0,9.23,3.42,9.23,8.29V63.86H74.64V56.68H73.33v7.18H66c-.48-5.36-4.82-9-10.91-9H50.88V51.94c4.66-.42,8.38-2.21,8.79-6.95l.44,0Z" fill="#7d7c7c"/>
   <path d="M39.9,45h.45c.41,4.74,4.13,6.53,8.78,6.95v2.91H45c-6.08,0-10.44,3.65-10.91,9H26.9V56.69H25.6v7.17h-5V53.27c0-4.89,3.79-8.29,9.23-8.29Z" fill="#7d7c7c"/>
@@ -1817,7 +1817,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Workers</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Workers</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1847,7 +1847,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
       </h2>
       
       <ul>
-      <li><label>Action</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Action</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1859,7 +1859,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Actuator</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Actuator</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1879,7 +1879,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>AlexaSkill</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>AlexaSkill</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 <radialGradient id="aws-iot-alexaskill-radial-gradient" cx="181.13" cy="417.21" fx="170.09971869749347" r="49.51" gradientTransform="matrix(0.29, -0.96, 0.54, 0.17, -212.85, 148)" gradientUnits="userSpaceOnUse">
@@ -1906,7 +1906,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Certificate</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Certificate</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1923,7 +1923,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DesiredState</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DesiredState</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1941,7 +1941,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Echo</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Echo</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 <linearGradient id="aws-iot-echo-linear-gradient" x1="32.1" y1="18.59" x2="67.95" y2="18.59" gradientUnits="userSpaceOnUse">
@@ -1974,7 +1974,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>FireTV</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>FireTV</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -1988,7 +1988,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>FireTVStick</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>FireTVStick</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2004,7 +2004,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>HTTP</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>HTTP</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2024,7 +2024,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>HTTP2</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>HTTP2</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2046,7 +2046,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>HardwareBoard</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>HardwareBoard</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2081,7 +2081,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>LambdaFunction</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>LambdaFunction</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2094,7 +2094,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>MQTT</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>MQTT</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2114,7 +2114,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Policy</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Policy</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2138,7 +2138,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ReportedState</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ReportedState</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2155,7 +2155,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Rule</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Rule</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2175,7 +2175,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Sensor</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Sensor</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2194,7 +2194,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Servo</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Servo</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2210,7 +2210,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Shadow</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Shadow</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2230,7 +2230,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Simulator</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Simulator</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2258,7 +2258,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>SmartHomeSkill</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>SmartHomeSkill</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 <radialGradient id="aws-iot-smarthomeskill-radial-gradient" cx="61.24" cy="347.29" fx="50.20685436638142" r="49.51" gradientTransform="matrix(0.29, -0.96, 0.54, 0.17, -139.57, 48.12)" gradientUnits="userSpaceOnUse">
@@ -2285,7 +2285,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Topic</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Topic</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2301,7 +2301,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>VoiceService</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>VoiceService</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2322,7 +2322,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
       </h2>
       
       <ul>
-      <li><label>ACM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ACM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2337,7 +2337,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>APIGateway</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>APIGateway</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>APIGateway</title>
   <g>
     <polygon points="84.1 55.15 67.54 54.47 56.81 55.15 74.52 79.23 84.1 55.15" fill="#fad791"/>
@@ -2368,7 +2368,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>AWS</label><div>
+      <li tabindex="0"><label>AWS</label><div>
 
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100" enable-background="new 0 0 100 100">
@@ -2412,7 +2412,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>AppStream</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>AppStream</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>App Stream</title>
   <g>
     <polygon points="68.15 56.42 64.11 56.16 60.3 56.5 64.41 70.38 68.15 56.42" fill="#fad791"/>
@@ -2434,7 +2434,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ApplicationDiscoveryService</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ApplicationDiscoveryService</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Application Discovery Service</title>
   <g>
     <polygon points="40.6 64 25.65 61.2 15.9 62.19 29.95 81.48 40.6 64" fill="#99bce3"/>
@@ -2456,7 +2456,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Artifact</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Artifact</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2479,7 +2479,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Athena</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Athena</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Athena</title>
   <g>
     <polygon points="84 64.68 50 60.49 16 64.68 50 91.3 84 64.68" fill="#fcbf92"/>
@@ -2506,7 +2506,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Batch</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Batch</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2535,7 +2535,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Chime</label><div>
+      <li tabindex="0"><label>Chime</label><div>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
@@ -2579,7 +2579,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CloudDirectory</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>CloudDirectory</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2613,7 +2613,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CloudFormation</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>CloudFormation</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2630,7 +2630,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CloudFront</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>CloudFront</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2657,7 +2657,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CloudHSM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>CloudHSM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2675,7 +2675,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CloudSearch</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>CloudSearch</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Cloud Search</title>
   <g>
     <polygon points="27.91 27.44 15.98 25.85 15.98 67.03 27.91 64.29 27.91 27.44" fill="#f58534"/>
@@ -2698,7 +2698,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CloudTrail</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>CloudTrail</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2721,7 +2721,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CloudWatch</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>CloudWatch</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2740,7 +2740,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CodeBuild</label><div>
+      <li tabindex="0"><label>CodeBuild</label><div>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
@@ -2784,7 +2784,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CodeCommit</label><div>
+      <li tabindex="0"><label>CodeCommit</label><div>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
@@ -2814,7 +2814,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CodeDeploy</label><div>
+      <li tabindex="0"><label>CodeDeploy</label><div>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
@@ -2838,7 +2838,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CodePipeline</label><div>
+      <li tabindex="0"><label>CodePipeline</label><div>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
@@ -2866,7 +2866,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CodeStar</label><div>
+      <li tabindex="0"><label>CodeStar</label><div>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
@@ -2894,7 +2894,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Cognito</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Cognito</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Cognito</title>
   <g>
     <polygon points="37.87 58.58 50 60.06 61.21 50.87 50 39.92 37.87 41.42 37.87 58.58" fill="#692f56"/>
@@ -2917,7 +2917,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Config</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Config</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -2940,7 +2940,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Connect</label><div>
+      <li tabindex="0"><label>Connect</label><div>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
@@ -2962,7 +2962,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DMS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DMS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>DMS</title>
   <g>
     <polygon points="74.52 56.07 60.13 55.35 60.07 55.34 60.07 55 60.08 55 39.92 55 39.93 55 39.93 55.34 39.87 55.35 25.51 56.07 18 58.41 25.49 67.26 39.93 69 39.92 69 60.08 69 60.07 69 74.49 67.26 82 58.41 74.52 56.07" fill="#99bce3"/>
@@ -2986,7 +2986,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DataPipeline</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DataPipeline</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Data Pipeline</title>
   <g>
     <polygon points="68.08 72.14 50 68.14 31.92 72.14 50 91 68.08 72.14" fill="#fcbf92"/>
@@ -3003,7 +3003,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DeviceFarm</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DeviceFarm</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Device Farm</title>
   <g>
     <polygon points="49.82 53.82 45.26 53.6 16.22 54.8 20.56 76.11 49.82 53.82" fill="#cfb2c1"/>
@@ -3027,7 +3027,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DirectConnect</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DirectConnect</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3046,7 +3046,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DirectoryService</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DirectoryService</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3069,7 +3069,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DynamoDB</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DynamoDB</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3084,7 +3084,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DynamoDBAccelerator</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DynamoDBAccelerator</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3121,7 +3121,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>EC2</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>EC2</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3138,7 +3138,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ECS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ECS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3169,7 +3169,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>EFS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>EFS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>EFS</title>
   <g>
     <polygon points="24.16 38.78 31.84 37.24 40.98 46.09 31.84 53.06 24.16 52.69 24.16 38.78" fill="#8c3123"/>
@@ -3196,7 +3196,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ELB</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ELB</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3225,7 +3225,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>EMR</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>EMR</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>EMR</title>
   <g>
     <polygon points="33.63 49.98 29.72 73.4 19.47 75.74 16.07 74.04 16.07 49.98 33.63 49.98" fill="#9d5025"/>
@@ -3245,7 +3245,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ES</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ES</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>ES</title>
   <g>
     <polygon points="16.03 74.05 20.38 76.28 22.14 75.87 22.47 44.87 20.38 44.77 16.03 45.2 16.03 74.05" fill="#9d5025"/>
@@ -3263,7 +3263,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ElasticBeanstalk</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ElasticBeanstalk</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3282,7 +3282,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ElasticCache</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ElasticCache</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3300,7 +3300,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ElasticTranscoder</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ElasticTranscoder</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Elastic Transcoder</title>
   <g>
     <polygon points="15.93 38.08 23.1 38.83 29.09 37.62 21.58 23.05 15.93 38.08" fill="#624a1e"/>
@@ -3341,7 +3341,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>GameList</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>GameList</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Game List</title>
   <g>
     <polygon points="56 36 68.14 34.06 68.14 18.04 56 21.93 56 36" fill="#692f56"/>
@@ -3364,7 +3364,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Glacier</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Glacier</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Glacier</title>
   <g>
     <polygon points="21.51 23.25 16.03 25.98 16.03 74.02 21.51 76.75 34.38 50 21.51 23.25" fill="#8c3123"/>
@@ -3379,7 +3379,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Glue</label><div>
+      <li tabindex="0"><label>Glue</label><div>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
@@ -3407,7 +3407,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Greengrass</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Greengrass</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3430,7 +3430,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>IAM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>IAM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>IAM</title>
   <g>
     <polygon points="36.06 37.67 31.07 33.08 28.58 37.88 32.4 38.33 36.06 37.67" fill="#3c4929"/>
@@ -3449,7 +3449,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Inspector</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Inspector</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3466,7 +3466,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>IoT</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>IoT</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Io T</title>
   <g>
     <polygon points="70.39 35.54 79.61 23.81 83.94 35.54 75.06 36.67 70.39 35.54" fill="#19486f"/>
@@ -3498,7 +3498,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>KMS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>KMS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3513,7 +3513,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Kinesis</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Kinesis</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Kinesis</title>
   <g>
     <polygon points="83.92 54.78 49.93 53.37 15.95 54.78 49.93 70.43 83.92 54.78" fill="#fcbf92"/>
@@ -3536,7 +3536,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Lambda</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Lambda</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3556,7 +3556,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Lex</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Lex</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Lex</title>
   <g>
     <polygon points="73.36 77.52 36.36 66.1 36.32 55.7 81.36 60.62 73.36 77.52" fill="#2e73b8"/>
@@ -3577,7 +3577,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Lightsail</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Lightsail</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3603,7 +3603,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>MachineLearning</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>MachineLearning</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Machine Learning</title>
   <g>
     <polygon points="64.93 59.11 73.28 59.91 84.57 58.02 84.57 45.95 73.28 45.01 64.93 45.4 64.93 59.11" fill="#205b99"/>
@@ -3636,7 +3636,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Macie</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Macie</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3646,7 +3646,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ManagedServices</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ManagedServices</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3673,7 +3673,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>MechanicalTurk</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>MechanicalTurk</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3691,7 +3691,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>MigrationHub</label><div>
+      <li tabindex="0"><label>MigrationHub</label><div>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
@@ -3730,7 +3730,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>MobileAnalytics</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>MobileAnalytics</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Mobile Analytics</title>
   <g>
     <polygon points="16 38.99 71.25 25.87 71.23 37.56 22.79 40.49 16 38.99" fill="#512843"/>
@@ -3755,7 +3755,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>MobileHub</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>MobileHub</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <defs>
     <linearGradient id="aws-logo-mobilehub-linear-gradient" x1="27.84" y1="53.5" x2="68.37" y2="42.71" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#f7962f" stop-opacity="0.96"/>
@@ -3779,7 +3779,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>OpsWorks</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>OpsWorks</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3798,7 +3798,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Organizations</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Organizations</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3821,7 +3821,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Pinpoint</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Pinpoint</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Pinpoint</title>
   <g>
     <polygon points="79.64 52.69 55.8 51.9 16 52.48 16 64.5 28.56 80.4 44.58 88.41 44.58 80.74 50 78.83 50 86.02 55.42 88.41 79.64 52.69" fill="#692f56"/>
@@ -3900,7 +3900,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Polly</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Polly</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Polly</title>
   <g>
     <polygon points="50 9 15.83 26.08 15.83 73.92 50 91 84.17 73.92 84.17 26.08 50 9" fill="#205b99"/>
@@ -3928,7 +3928,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>QuickSight</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>QuickSight</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Quick Sight</title>
   <g id="Knockout_Shape_-_Small_Corners_-_No_Shadow" data-name="Knockout Shape - Small Corners - No Shadow">
     <path id="Fill-2" d="M72.5,34.2,50,56.7V38.2L27.5,60.7V26.2H72.6v8ZM25.8,22.3a2.26,2.26,0,0,0-2.3,2.3V73a2.26,2.26,0,0,0,2.3,2.3H74.2A2.26,2.26,0,0,0,76.5,73V24.6a2.26,2.26,0,0,0-2.3-2.3Z" fill="#00b7f4"/>
@@ -3938,7 +3938,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>RDS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>RDS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -3953,7 +3953,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Redshift</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Redshift</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Redshift</title>
   <g>
     <polygon points="78.47 23.02 84.17 25.77 84.17 74.08 78.47 76.84 69.45 50 78.47 23.02" fill="#5294cf"/>
@@ -3969,7 +3969,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Rekognition</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Rekognition</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Rekognition</title>
   <g>
     <polygon points="18.84 63.12 32.35 61.55 32.35 38.45 18.84 36.88 18.84 63.12" fill="#5294cf"/>
@@ -3992,7 +3992,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Route53</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Route53</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4008,7 +4008,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>S3</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>S3</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>S3</title>
   <g>
     <polygon points="21.54 23.23 16.08 25.96 16.08 73.93 21.54 76.66 34.94 49.94 21.54 23.23" fill="#8c3123"/>
@@ -4029,7 +4029,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>SES</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>SES</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>SES</title>
   <g>
     <polygon points="31.4 21.96 14.7 48.55 31.4 75.14 44.74 71.72 45.4 25.55 31.4 21.96" fill="#876929"/>
@@ -4045,7 +4045,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>SMS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>SMS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>SMS</title>
   <g>
     <polygon points="53.59 58.35 50.04 58.01 16.04 61.34 19.12 75.47 53.59 58.35" fill="#99bce3"/>
@@ -4089,7 +4089,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>SNS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>SNS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>SNS</title>
   <g>
     <polygon points="42.2 77.81 35.11 75.83 28.41 68.19 35.88 68.81 42.2 77.81" fill="#b8852e"/>
@@ -4110,7 +4110,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>SQS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>SQS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>SQS</title>
   <g>
     <polygon points="15.9 35.53 15.92 74.12 50 91.16 84.08 74.12 84.08 64.48 55.1 60.87 55.12 39.13 84.1 35.54 84.1 25.89 50 8.84 15.9 25.88 15.9 35.53" fill="#876929"/>
@@ -4130,7 +4130,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>SWF</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>SWF</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>SWF</title>
   <g>
     <polygon points="45.16 68.06 79.75 76.29 84.1 74.11 84.1 25.89 79.75 23.71 45.16 31.82 45.16 68.06" fill="#876929"/>
@@ -4148,7 +4148,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ServiceCatalog</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ServiceCatalog</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4179,7 +4179,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Shield</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Shield</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4196,7 +4196,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Snowball</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Snowball</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Snowball</title>
   <g>
     <polygon points="50 45.56 74.43 28.41 83.97 45.2 60.88 46.15 50 45.56" fill="#5e1f18"/>
@@ -4225,7 +4225,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>StepFunctions</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>StepFunctions</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Step Functions</title>
   <g>
     <polygon points="29.64 40.39 24.95 41.12 16.05 40.38 20.36 23.8 29.64 40.39" fill="#624a1e"/>
@@ -4263,7 +4263,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>StorageGateway</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>StorageGateway</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Storage Gateway</title>
   <g>
     <polygon points="25.57 78.79 16.04 74.03 16.04 25.97 25.57 21.21 42.53 51.66 25.57 78.79" fill="#8c3123"/>
@@ -4278,7 +4278,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>SystemsManager</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>SystemsManager</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4303,7 +4303,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>TrustedAdvisor</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>TrustedAdvisor</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4321,7 +4321,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>VPC</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>VPC</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4342,7 +4342,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>WAF</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>WAF</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4366,7 +4366,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>XRay</label><div>
+      <li tabindex="0"><label>XRay</label><div>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
@@ -4403,7 +4403,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
       </h2>
       
       <ul>
-      <li><label>Apps</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Apps</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4414,7 +4414,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Automation</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Automation</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4427,7 +4427,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Changeset</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Changeset</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4449,7 +4449,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Checklist</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Checklist</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4471,7 +4471,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ChecklistCost</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ChecklistCost</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4493,7 +4493,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ChecklistFaultTolerance</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ChecklistFaultTolerance</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4517,7 +4517,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ChecklistPerformance</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ChecklistPerformance</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4553,7 +4553,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ChecklistSecurity</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ChecklistSecurity</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4575,7 +4575,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Deployments</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Deployments</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4592,7 +4592,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Documents</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Documents</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4612,7 +4612,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>EventAlarm</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>EventAlarm</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4631,7 +4631,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>EventEventBased</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>EventEventBased</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4650,7 +4650,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>EventTimeBased</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>EventTimeBased</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4673,7 +4673,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Filter</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Filter</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4685,7 +4685,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Instances</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Instances</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4712,7 +4712,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Inventory</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Inventory</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4733,7 +4733,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Layers</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Layers</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4746,7 +4746,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>MaintenanceWindow</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>MaintenanceWindow</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4762,7 +4762,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Monitoring</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Monitoring</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4773,7 +4773,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ParameterStore</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ParameterStore</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4792,7 +4792,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>PatchManager</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>PatchManager</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4839,7 +4839,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Permissions</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Permissions</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4850,7 +4850,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Resources</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Resources</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4864,7 +4864,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Rule</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Rule</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4885,7 +4885,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>RunCommand</label><div>
+      <li tabindex="0"><label>RunCommand</label><div>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
@@ -4918,7 +4918,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Stack</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Stack</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4929,7 +4929,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>StateManager</label><div>
+      <li tabindex="0"><label>StateManager</label><div>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
@@ -4962,7 +4962,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Template</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Template</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -4990,7 +4990,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
       </h2>
       
       <ul>
-      <li><label>Decider</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Decider</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Decider</title>
   <g>
     <path d="M77.58,51.37a27.58,27.58,0,0,1-55.16,0V48.89S40.67,23.79,50,23.79c10.9,0,27.58,25.1,27.58,25.1Z" fill="#876929"/>
@@ -5012,7 +5012,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Email</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Email</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <defs>
     <clipPath id="clip-path">
       <path d="M86,58.68V77.07H22.87V58.68Z" fill="#876929"/>
@@ -5051,7 +5051,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>EmailNotification</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>EmailNotification</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <defs>
     <clipPath id="clip-path">
       <path d="M41.75,33.15l-14.16.46a13.25,13.25,0,0,0-1-5V26.17c.31.77,13.06,3.23,13.06,3.23Z" fill="#876929"/>
@@ -5088,7 +5088,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>HTTPNotification</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>HTTPNotification</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <defs>
     <clipPath id="clip-path">
       <path d="M41.75,33.15l-14.16.46a13.25,13.25,0,0,0-1-5V26.17c.31.77,13.06,3.23,13.06,3.23Z" fill="#876929"/>
@@ -5124,7 +5124,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Message</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Message</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Message</title>
   <g>
     <rect x="31" y="28" width="10" height="44" fill="#876929"/>
@@ -5144,7 +5144,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Queue</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Queue</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Queue</title>
   <g>
     <rect x="17.16" y="28.68" width="65.68" height="42.64" fill="#876929"/>
@@ -5160,7 +5160,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Topic</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Topic</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Topic</title>
   <g>
     <rect x="9.06" y="61.95" width="81.89" height="13.97" fill="#876929"/>
@@ -5177,7 +5177,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Worker</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Worker</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Worker</title>
   <g>
     <rect x="23.12" y="21.9" width="53.76" height="56.21" fill="#876929"/>
@@ -5201,7 +5201,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
       </h2>
       
       <ul>
-      <li><label>Android</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Android</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Android</title>
   <g>
     <polygon points="49.98 85.98 81.72 67.95 81.72 31.98 49.98 49.96 49.98 85.98" fill="#fff"/>
@@ -5224,7 +5224,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CLI</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>CLI</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>CLI</title>
   <g>
     <g>
@@ -5287,7 +5287,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Eclipse</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Eclipse</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Eclipse</title>
   <g>
     <g>
@@ -5323,7 +5323,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Java</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Java</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Java</title>
   <g>
     <polygon points="49.98 85.98 81.72 67.95 81.72 31.98 49.98 49.96 49.98 85.98" fill="#fff"/>
@@ -5346,7 +5346,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>JavaScript</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>JavaScript</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Java Script</title>
   <g>
     <polygon points="49.98 85.98 81.72 67.95 81.72 31.98 49.98 49.96 49.98 85.98" fill="#fff"/>
@@ -5369,7 +5369,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Net</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Net</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Net</title>
   <g>
     <polygon points="49.98 85.98 81.72 67.95 81.72 31.98 49.98 49.96 49.98 85.98" fill="#fff"/>
@@ -5392,7 +5392,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>NodeJS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>NodeJS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Node JS</title>
   <g>
     <polygon points="49.98 85.98 81.72 67.95 81.72 31.98 49.98 49.96 49.98 85.98" fill="#fff"/>
@@ -5415,7 +5415,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>PHP</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>PHP</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>PHP</title>
   <g>
     <polygon points="49.98 85.98 81.72 67.95 81.72 31.98 49.98 49.96 49.98 85.98" fill="#fff"/>
@@ -5438,7 +5438,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>PowerShell</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>PowerShell</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Power Shell</title>
   <g>
     <g>
@@ -5474,7 +5474,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Python</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Python</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Python</title>
   <g>
     <polygon points="49.98 85.98 81.72 67.95 81.72 31.98 49.98 49.96 49.98 85.98" fill="#fff"/>
@@ -5497,7 +5497,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Ruby</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Ruby</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Ruby</title>
   <g>
     <polygon points="49.98 85.98 81.72 67.95 81.72 31.98 49.98 49.96 49.98 85.98" fill="#fff"/>
@@ -5520,7 +5520,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>VisualStudio</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>VisualStudio</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Visual Studio</title>
   <g>
     <g>
@@ -5556,7 +5556,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Xamerin</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Xamerin</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Xamerin</title>
   <g>
     <polygon points="49.98 85.98 81.72 67.95 81.72 31.98 49.98 49.96 49.98 85.98" fill="#fff"/>
@@ -5593,7 +5593,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>iOS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>iOS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>i OS</title>
   <g>
     <polygon points="49.98 85.98 81.72 67.95 81.72 31.98 49.98 49.96 49.98 85.98" fill="#fff"/>
@@ -5625,7 +5625,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
       </h2>
       
       <ul>
-      <li><label>ACM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ACM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -5642,7 +5642,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DataEncryptionKey</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DataEncryptionKey</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Data Encryption Key</title>
   <g>
     <path d="M67.38,23.33a3,3,0,0,1,3,3v47.4a3,3,0,0,1-3,3H32.62a3,3,0,0,1-3-3V26.29a3,3,0,0,1,3-3H67.38Z" fill="#d2d3d3"/>
@@ -5655,7 +5655,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>EncryptedData</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>EncryptedData</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Encrypted Data</title>
   <g id="_Group_" data-name="&lt;Group&gt;">
     <polygon points="69 74.5 31 74.5 31 25.5 57.51 25.5 69 37.87 69 74.5" fill="#d2d3d3"/>
@@ -5666,7 +5666,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>IAM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>IAM</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>IAM</title>
   <g>
     <circle cx="38.81" cy="51.24" r="10.76" fill="#4b612c"/>
@@ -5681,7 +5681,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Inspector</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Inspector</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -5711,7 +5711,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>LongTermCredential</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>LongTermCredential</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -5728,7 +5728,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>MFAToken</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>MFAToken</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -5748,7 +5748,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Permissions</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Permissions</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -5764,7 +5764,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Role</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Role</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -5779,7 +5779,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>STS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>STS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>STS</title>
   <g>
     <circle cx="34.1" cy="51.24" r="2.81" fill="#4b612c"/>
@@ -5793,7 +5793,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>STSToken</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>STSToken</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>STSToken</title>
   <g>
     <path d="M67.38,22.09a3,3,0,0,1,3,3v47.4a3,3,0,0,1-3,3H32.62a3,3,0,0,1-3-3V25.05a3,3,0,0,1,3-3H67.38Z" fill="#759c3e"/>
@@ -5814,7 +5814,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>TemporaryCredential</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>TemporaryCredential</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -5844,7 +5844,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
       </h2>
       
       <ul>
-      <li><label>Bucket</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Bucket</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Bucket</title>
   <g>
     <path d="M50,25.06,76.5,29v2.32c0,3.45-11.87,6.23-26.51,6.23s-26.5-2.78-26.5-6.23V28.8Z" fill="#8c3123"/>
@@ -5857,7 +5857,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>BucketWithObjects</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>BucketWithObjects</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Bucket With Objects</title>
   <g>
     <path d="M50,25.06,76.5,29v2.32c0,3.45-11.87,6.23-26.51,6.23s-26.5-2.78-26.5-6.23V28.8Z" fill="#8c3123"/>
@@ -5873,7 +5873,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>CachedVolume</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>CachedVolume</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Cached Volume</title>
   <g>
     <polygon points="76.47 19.7 76.47 82.78 57.74 82.78 57.74 72.68 42.26 72.68 42.26 82.78 23.53 82.78 23.53 19.7 76.47 19.7" fill="#8c3123"/>
@@ -5891,7 +5891,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>EBS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>EBS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>EBS</title>
   <g>
     <polygon points="72.33 23.42 72.33 25.91 27.21 25.91 27.21 23.42 49.77 17.33 72.33 23.42" fill="#8c3123"/>
@@ -5904,7 +5904,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>EFSFilesystem</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>EFSFilesystem</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>EFSFilesystem</title>
   <g>
     <rect x="24.31" y="27.63" width="10.35" height="10.35" rx="2.18" ry="2.18" fill="#8c3123"/>
@@ -5927,7 +5927,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>GlacierArchive</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>GlacierArchive</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Glacier Archive</title>
   <g>
     <rect x="24.99" y="31.41" width="23.4" height="51.59" fill="#8c3123"/>
@@ -5944,7 +5944,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>GlacierVault</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>GlacierVault</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Glacier Vault</title>
   <g>
     <polygon points="72.33 23.42 72.33 25.91 27.21 25.91 27.21 23.42 49.77 17.33 72.33 23.42" fill="#8c3123"/>
@@ -5968,7 +5968,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>ImportExport</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>ImportExport</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Import Export</title>
   <g>
     <path d="M49.07,24l28,3.31v2.48c0,3.21-12.51,5.79-28,5.79s-28-2.59-28-5.79V27.35Z" fill="#8c3123"/>
@@ -5987,7 +5987,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>NonCachedVolume</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>NonCachedVolume</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Non Cached Volume</title>
   <g>
     <polygon points="76.47 19.7 76.47 82.78 57.74 82.78 57.74 72.68 42.26 72.68 42.26 82.78 23.53 82.78 23.53 19.7 76.47 19.7" fill="#8c3123"/>
@@ -5998,7 +5998,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Object</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Object</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Object</title>
   <g>
     <circle cx="50" cy="51.24" r="18.76" fill="#8c3123"/>
@@ -6010,7 +6010,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Snapshot</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Snapshot</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Snapshot</title>
   <g>
     <rect x="35.55" y="26.61" width="28.96" height="7.66" fill="#8c3123"/>
@@ -6027,7 +6027,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>VirtualTapeLibrary</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>VirtualTapeLibrary</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Virtual Tape Library</title>
   <g>
     <polygon points="76.47 19.7 76.47 82.78 57.74 82.78 57.74 72.68 42.26 72.68 42.26 82.78 23.53 82.78 23.53 19.7 76.47 19.7" fill="#8c3123"/>
@@ -6049,7 +6049,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Volume</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Volume</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <title>Volume</title>
   <g>
     <polygon points="72.33 23.42 72.33 25.91 27.21 25.91 27.21 23.42 49.77 17.33 72.33 23.42" fill="#8c3123"/>
@@ -6071,7 +6071,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
       </h2>
       
       <ul>
-      <li><label>AVS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>AVS</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6101,7 +6101,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Bank</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Bank</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6137,7 +6137,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Bicycle</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Bicycle</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6180,7 +6180,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Camera</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Camera</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6216,7 +6216,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Car</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Car</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6258,7 +6258,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Cart</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Cart</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6302,7 +6302,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Coffeepot</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Coffeepot</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6341,7 +6341,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>DoorLock</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>DoorLock</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6377,7 +6377,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Factory</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Factory</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6415,7 +6415,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Generic</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Generic</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6451,7 +6451,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>House</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>House</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6487,7 +6487,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>LightBulb</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>LightBulb</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6525,7 +6525,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Medical</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Medical</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6558,7 +6558,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Police</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Police</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6590,7 +6590,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Thermostat</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Thermostat</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6635,7 +6635,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Travel</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Travel</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6675,7 +6675,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Utility</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Utility</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6730,7 +6730,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>WindFarm</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>WindFarm</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
 <defs>
 
 </defs>
@@ -6774,7 +6774,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
       </h2>
       
       <ul>
-      <li><label>Docs</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Docs</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <defs>
     <linearGradient id="aws-work-docs-linear-gradient" x1="-709.67" y1="-190.85" x2="-709.67" y2="133.29" gradientTransform="translate(233.53 57.6) scale(0.26)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#f58536"/>
@@ -6799,7 +6799,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Mail</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Mail</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <defs>
     <linearGradient id="aws-work-mail-linear-gradient" x1="50" y1="-687.73" x2="50" y2="-603.9" gradientTransform="translate(0 696)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#f58536"/>
@@ -6816,7 +6816,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     
 
 
-      <li><label>Spaces</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
+      <li tabindex="0"><label>Spaces</label><div><svg xmlns="http://www.w3.org/2000/svg" width=64 size=64 {...otherProps} height=64 viewBox="0 0 100 100">
   <defs>
     <linearGradient id="aws-work-spaces-linear-gradient" x1="50" y1="7.94" x2="50" y2="92.36" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#f58536"/>
@@ -6838,7 +6838,7 @@ body { background: #EEE; font-family: sans-serif; padding: 2em; }
     <br><br>
     <a href="https://github.com/travomic/react-aws-icons">https://github.com/travomic/react-aws-icons</a>
     <br>
-    Version <var>1.1.1</var>
+    Version <var>1.1.2</var>
     <br>
     License: <em>MIT</em>
 
