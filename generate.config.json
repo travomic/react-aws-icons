@@ -1,6 +1,7 @@
 {
   "jsxPath": "./jsx",
   "svgPath": "./svg",
+  "tmpPath": "./tmp",
   "zipPath": "./zip",
   "previewPath": "./docs",
   "packagePath": "./package.json",
@@ -317,6 +318,10 @@
         "Storage/Storage_AWSStorageGateway_virtualtapelibrary": "storage/VirtualTapeLibrary",
         "Storage/Storage_snapshot": "storage/Snapshot",
         "Storage/Storage_volume": "storage/Volume"
+      },
+      "more": {
+        "https://upload.wikimedia.org/wikipedia/commons/5/5c/AWS_Simple_Icons_AWS_Cloud.svg": "compute/AWSCloud",
+        "https://upload.wikimedia.org/wikipedia/commons/f/fe/AWS_Simple_Icons_VPC_Subnet.svg": "compute/VPCSubnet"
       }
     }
   }

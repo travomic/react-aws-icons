@@ -29,8 +29,7 @@ var AWSIcon = function AWSIcon(props) {
       size: size
     }, otherProps, {
       height: size,
-      viewBox: "0 0 100 100",
-      "enable-background": "new 0 0 100 100"
+      viewBox: "0 0 100 100"
     }), _react.default.createElement("title", null, "AWS"), _react.default.createElement("g", null, _react.default.createElement("rect", {
       x: "15",
       y: "15",

@@ -42,6 +42,7 @@ You can [preview them as HTML here](https://travomic.github.io/react-aws-icons/a
 
 ### aws/compute
 - AMI
+- AWSCloud
 - AccessControlList
 - AppLoadBalancer
 - AutoScaling
@@ -91,6 +92,7 @@ You can [preview them as HTML here](https://travomic.github.io/react-aws-icons/a
 - SpotFleet
 - Stream
 - VPC
+- VPCSubnet
 - VPN
 - VPNConnection
 - X1

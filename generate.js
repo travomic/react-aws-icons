@@ -1,19 +1,24 @@
 // This Node shell script converts a folder of SVG files into JSX components.
 // If provided a URL to a ZIP, it will download, and extract mapped SVGs.
 
+const detectCharacterEncoding = require('detect-character-encoding');
 const fs = require('fs-extra');
 const https = require('https');
 const unzipper = require('unzipper');
 const CONFIG_PATH = './generate.config.json';
 const PACKAGE_PATH = './package.json';
-const UTF8 = 'utf8';
+const ENCODING = 'utf8'
 const log = console.log;
+
+const cleanString = input => input.split('')
+  .map(char => char.charCodeAt(0) <= 127 ? char : '', input)
+  .join('');
 
 const downloadTo = (url, write$) => {
   return new Promise((resolve) => {
     https.get(url, async (resp) => {
       resp.on('data', (chunk) => { write$.write(chunk); });
-      resp.on('end', () => { write$.end(); resolve(true); });
+      resp.on('end', () => { write$.end(); setTimeout(() => resolve(true), 1000); });
       resp.on('error', () => { resolve(false); });
     });
   });
@@ -23,7 +28,7 @@ const downloadTo = (url, write$) => {
 const svgToIcon = async (path, file) => {
   const name = file.replace(/\.svg$/, '');
   const pathKey = path.replace(/^\.\/svg\//, '').replace(/\W+/g, '-');
-  let svg = await fs.readFile(`${path}/${file}`, UTF8);
+  let svg = await fs.readFile(`${path}/${file}`, ENCODING);
   const classDefs = {};
   const svgFills = {};
   
@@ -34,8 +39,10 @@ const svgToIcon = async (path, file) => {
 
   // Clean out troublesome attributes from SVG source content.
   svg = svg
+    .replace(/<!DOCTYPE [^>]+>/, '')
     .replace('xmlns:xlink="http://www.w3.org/1999/xlink" ', '')
     .replace(' style="enable-background:new 0 0 100 100;"', '')
+    .replace(/ enable-background="[^"]+"/g, '')
     .replace(' xml:space="preserve"', '')
     .replace('id="Layer_1" ', '')
     .replace('data-name="Layer 1" ', '')
@@ -143,8 +150,8 @@ const svgToIcon = async (path, file) => {
   
   // Convert remaining known attribute names to JSX format.
   svg = svg
-    .replace(/height="100(px)?"/, 'height={size}')
-    .replace(/width="100(px)?"/, 'width={size} size={size} {...otherProps}');
+    .replace(/height="\d+(px|%)?"/, 'height={size}')
+    .replace(/width="\d+(px|%)?"/, 'width={size} size={size} {...otherProps}');
 
   // Note, the returned value is a list. 
   return [name, svg];
@@ -154,7 +161,7 @@ const iconListToDiskAndHTML = (ico, dest, list) => {
   return list.map(([name, content]) => {
     // Inject the cleaned content into the Icon template.
     const jsx = ico.replace('%SVG_CONTENT%', content);
-    fs.writeFile(`${dest}/${name}.jsx`, jsx, UTF8);
+    fs.writeFile(`${dest}/${name}.jsx`, jsx, ENCODING);
 
     let html = content;
 
@@ -178,8 +185,8 @@ const iconListToDiskAndHTML = (ico, dest, list) => {
 
 // Here's where the side-effects happen, writing the JSX Icon files to disk.
 const iconTreeToDisk = async (pkg, conf, key, tree) => {
-  const ico = await fs.readFile(conf.iconTemplate, UTF8);
-  const pre = await fs.readFile(conf.previewTemplate, UTF8);
+  const ico = await fs.readFile(conf.iconTemplate, ENCODING);
+  const pre = await fs.readFile(conf.previewTemplate, ENCODING);
   const jsxPath = `${conf.jsxPath}/${key}`;
   const previewDest = `${conf.previewPath}/${key}.html`;
   const { favicon, sourceURL } = conf.icons[key];
@@ -237,7 +244,7 @@ const iconTreeToDisk = async (pkg, conf, key, tree) => {
 
   // Write the preview HTML page, with inlined SVG samples.
   fs.createFileSync(previewDest);
-  fs.writeFile(previewDest, content, UTF8);
+  fs.writeFile(previewDest, content, ENCODING);
 
   return output.reduce((acc, sub) => {
     if (sub.list.length === 0) { return acc; }
@@ -247,10 +254,10 @@ const iconTreeToDisk = async (pkg, conf, key, tree) => {
 };
 
 const writeREADME = async (pkg, conf, iconList) => {
-  let readme = await fs.readFile(conf.readmeTemplate, UTF8);
+  let readme = await fs.readFile(conf.readmeTemplate, ENCODING);
   readme = readme.replace(/%PACKAGE_NAME%/g, pkg.name)
     .replace('%ICON_LIST%', iconList);
-  fs.writeFile('README.md', readme, UTF8);
+  fs.writeFile('README.md', readme, ENCODING);
 }
 
 // Process each of the files and sub-folders found in the given source path.
@@ -280,9 +287,11 @@ const processPath = async (path, dest) => {
 // The config "icons" object can declare multiple sets by "key" name.
 const processIconKey = async (conf, iconKey) => {
   const iconMap = conf.icons[iconKey].map;
+  const iconMore = conf.icons[iconKey].more;
   const iconSrc = conf.icons[iconKey].src;
   const jsxPath = `${conf.jsxPath}/${iconKey}`;
   const svgPath = `${conf.svgPath}/${iconKey}`;
+  const tmpPath = `${conf.tmpPath}/${iconKey}`;
   const zipFile = `${conf.zipPath}/${iconKey}.zip`;
   const zipPathPrefix = conf.icons[iconKey].zipPathPrefix || '';
   const prefixRegex = new RegExp(`^${zipPathPrefix}`);
@@ -333,6 +342,52 @@ const processIconKey = async (conf, iconKey) => {
       .promise();
   }
 
+  // Make sure the SVG dir has each of the declared "MORE" icons in it.
+  if (iconMore) {
+    fs.ensureDirSync(tmpPath);
+
+    const pMore = await Object.keys(iconMore).map(async (moreSrc) => {
+      const destName = iconMore[moreSrc];
+      const tempFile = `${tmpPath}/${destName}.svg`;
+      const moreFile = `${svgPath}/${destName}.svg`;
+      const svgExists = fs.pathExistsSync(moreFile);
+
+      if (!svgExists) {
+        if (moreSrc.match(/^https?:.*\.svg$/)) {
+          fs.ensureDirSync(tempFile.replace(/\/[^\/]+\.svg$/, ''));
+          fs.ensureDirSync(moreFile.replace(/\/[^\/]+\.svg$/, ''));
+
+          const write$ = fs.createWriteStream(tempFile, { encoding: ENCODING });
+          const downloaded = await downloadTo(moreSrc, write$);
+
+          if (downloaded) {
+            const svgBuffer = fs.readFileSync(tempFile);
+            const charset = detectCharacterEncoding(svgBuffer);
+
+            // Convert UTF-16 SVG documents to UTF-8.
+            if (charset.encoding !== 'UTF-8') {
+              const content = fs.readFileSync(tempFile, { encoding: 'ucs2' });
+              fs.writeFileSync(
+                moreFile,
+                cleanString(content).replace(' encoding="utf-16"', ''),
+                { encoding: ENCODING }
+              );
+            } else {
+              await fs.move(tempFile, moreFile);
+            }
+            log('Downloaded SVG to:', moreFile);
+          } else {
+            log('Unable to download SVG for:', destName, moreSrc);
+          }
+        } else {
+          log('Invalid HTTPS URL for SVG, skipping...', destName, moreSrc);
+        }
+      }
+    });
+    await Promise.all(pMore);
+    await fs.remove(conf.tmpPath);
+  }
+
   // Recursively process source directory, and sub paths into JSX contents.
   const tree = await processPath(`${svgPath}/`, `${jsxPath}/`);
   return [iconKey, tree];
@@ -348,6 +403,7 @@ const generate = async (confPath, pkgPath, clear = false) => {
   }
 
   // Remove any old generated files, and make sure the destination path exists.
+  await fs.emptyDir(conf.tmpPath);
   await fs.emptyDir(conf.jsxPath);
   await fs.mkdirs(conf.jsxPath);
   await fs.mkdirs(conf.zipPath);

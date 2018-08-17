@@ -15,7 +15,8 @@
   "scripts": {
     "gen": "node generate",
     "gen:clean": "node generate clean",
-    "build": "rm -rf dist && babel jsx --out-dir=dist --coments=false"
+    "build": "rm -rf dist && babel jsx --out-dir=dist --coments=false",
+    "preview": "yarn http-server -p 8880 ./docs"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.51",
@@ -23,7 +24,9 @@
     "@babel/preset-env": "^7.0.0-beta.51",
     "@babel/preset-react": "^7.0.0-beta.51",
     "@babel/preset-stage-2": "^7.0.0-beta.51",
+    "detect-character-encoding": "^0.6.0",
     "fs-extra": "^6.0.1",
+    "http-server": "^0.11.1",
     "unzipper": "^0.8.14"
   },
   "peerDependencies": {
